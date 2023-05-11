@@ -1,9 +1,13 @@
 export interface IOrder {
   id: string;
   name: string;
-  articles: IArticle[];
+  articles: IOrderArticle[];
   price: number;
   total: number;
+}
+
+export interface IOrderArticle extends IArticle {
+  quantity: number;
 }
 
 export interface IArticle {

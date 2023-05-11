@@ -1,4 +1,4 @@
-import { useContext, useCallback } from "react";
+import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { ContextOrder } from "../contexts/orderContext";
 import articleServices from "../services/ArticleServices";
@@ -9,7 +9,7 @@ const useArticles = () => {
   const navigate = useNavigate();
   const { articles, setArticles } = useContext(ContextOrder);
 
-  const getArticles = useCallback(async () => {
+  const getArticles = async () => {
     if (!setArticles) return;
     try {
       const data = await articleServices.getArticles();
@@ -18,11 +18,10 @@ const useArticles = () => {
       console.error(error);
       throw error;
     }
-  }, [setArticles]);
+  };
 
   const getArticleById = (id: string) => {
-    // console.log(articles);
-    const article = articles.find((art) => art.id === id);
+    const article = articles.find((art) => String(art.id) === String(id));
     return article;
   };
 

@@ -1,5 +1,5 @@
 import OrderPort from "../ports/OrderPort";
-import { IOrder, IArticle } from "../interfaces/order";
+import { IOrder } from "../interfaces/order";
 
 class OrderService {
   private orderPort: typeof OrderPort;
@@ -11,8 +11,11 @@ class OrderService {
   async getOrders(): Promise<IOrder[]> {
     return await this.orderPort.getOrders();
   }
-  async getArticles(): Promise<IArticle[]> {
-    return await this.orderPort.getArticles();
+  async createOrder(order: IOrder): Promise<IOrder[]> {
+    return await this.orderPort.createOrder(order);
+  }
+  async updateOrder(order: IOrder): Promise<IOrder[]> {
+    return await this.orderPort.updateOrder(order);
   }
 }
 

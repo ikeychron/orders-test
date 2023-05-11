@@ -1,6 +1,7 @@
 import Orders from "../pages/OrdersPage";
 import Articles from "../pages/ArticlesPage";
 import ArticlePage from "../pages/ArticlePage";
+import OrderPage from "../pages/OrderPage";
 
 const router = [
   {
@@ -18,6 +19,14 @@ const router = [
   {
     path: "article/:id",
     element: <ArticlePage isEdit />,
+  },
+  {
+    path: "new-order",
+    element: <OrderPage />,
+  },
+  {
+    path: "order/:id",
+    element: <OrderPage isEdit />,
   },
 ];
 

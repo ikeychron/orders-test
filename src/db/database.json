@@ -1,76 +1,6 @@
 {
   "articles": [
     {
-      "id": 1,
-      "name": "Apple MacBook Pro",
-      "description": "Apple MacBook Pro 17' with 16gb RAM and 256GB SSD",
-      "price": 1089.9,
-      "tax": 12
-    },
-    {
-      "id": 2,
-      "name": "Samsung Galaxy S21 Ultra",
-      "description": "Samsung Galaxy S21 Ultra 5G with 12GB RAM and 256GB storage",
-      "price": 1199.99,
-      "tax": 13.99
-    },
-    {
-      "id": 3,
-      "name": "Sony PlayStation 5",
-      "description": "Sony PlayStation 5 with DualSense Wireless Controller",
-      "price": 499.99,
-      "tax": 5.99
-    },
-    {
-      "id": 4,
-      "name": "Bose QuietComfort 35 II",
-      "description": "Bose QuietComfort 35 II wireless headphones with noise cancellation",
-      "price": 299.99,
-      "tax": 3.99
-    },
-    {
-      "id": 5,
-      "name": "DJI Mavic Air 2",
-      "description": "DJI Mavic Air 2 drone with 4K camera and 3-axis gimbal",
-      "price": 799.99,
-      "tax": 8.99
-    },
-    {
-      "id": 6,
-      "name": "Canon EOS R5",
-      "description": "Canon EOS R5 mirrorless camera with 45MP full-frame sensor",
-      "price": 3799.99,
-      "tax": 41.99
-    },
-    {
-      "id": 7,
-      "name": "Fitbit Sense",
-      "description": "Fitbit Sense smartwatch with heart rate monitoring and GPS",
-      "price": 299.99,
-      "tax": 3.99
-    },
-    {
-      "id": 8,
-      "name": "LG CX Series OLED TV",
-      "description": "LG CX Series OLED TV with 4K resolution and Dolby Vision",
-      "price": 1999.99,
-      "tax": 21.99
-    },
-    {
-      "id": 9,
-      "name": "Nikon D850",
-      "description": "Nikon D850 DSLR camera with 45.7MP full-frame sensor",
-      "price": 2799.99,
-      "tax": 30.99
-    },
-    {
-      "id": 10,
-      "name": "Microsoft Surface Laptop 4",
-      "description": "Microsoft Surface Laptop 4 with 13.5' touchscreen and 512GB SSD",
-      "price": 1399.99,
-      "tax": 15.99
-    },
-    {
       "name": "Xbox One",
       "description": "Xbox asi es",
       "price": "10",
@@ -90,15 +20,95 @@
       "price": "1999",
       "tax": "1",
       "id": "4bedc08c-0e37-4a07-9165-52acbf856ece"
+    },
+    {
+      "id": "40ad4baa-6f37-44c7-8359-5f4125c9b71e",
+      "name": "Keychron Keyboard",
+      "description": "Keyboard",
+      "price": "199",
+      "tax": "1"
     }
   ],
   "orders": [
     {
-      "id": 1,
-      "name": "Pedido #1",
-      "articles": [],
-      "price": 1089.9,
-      "total": 1200
+      "id": "978b534b-28f2-4125-8498-e14d95a15d7b",
+      "name": "Pedido #6",
+      "articles": [
+        {
+          "id": "40ad4baa-6f37-44c7-8359-5f4125c9b71e",
+          "name": "Keychron Keyboard",
+          "description": "Keyboard",
+          "price": "199",
+          "tax": "1",
+          "quantity": 2
+        },
+        {
+          "name": "PC ",
+          "description": "PC",
+          "price": "1999",
+          "tax": "1",
+          "id": "4bedc08c-0e37-4a07-9165-52acbf856ece",
+          "quantity": 2
+        },
+        {
+          "name": "Xbox One",
+          "description": "Xbox asi es",
+          "price": "10",
+          "tax": "1.99",
+          "id": "371378f6-2c95-48bd-bddb-9f009444e5fd",
+          "quantity": 3
+        },
+        {
+          "name": "PS5",
+          "description": "PS4 Pro new with a controller",
+          "price": "1200",
+          "tax": "1.99",
+          "id": "56bec74e-9bc7-4488-9812-5ee4e6956452",
+          "quantity": 3
+        }
+      ],
+      "price": 8026,
+      "total": 80275.94
+    },
+    {
+      "id": "941b3f17-5dff-4c6e-9cbf-144ff5a98585",
+      "name": "Pedido #5",
+      "articles": [
+        {
+          "name": "PC ",
+          "description": "PC",
+          "price": "1999",
+          "tax": "1",
+          "id": "4bedc08c-0e37-4a07-9165-52acbf856ece",
+          "quantity": 1
+        },
+        {
+          "id": "40ad4baa-6f37-44c7-8359-5f4125c9b71e",
+          "name": "Keychron Keyboard",
+          "description": "Keyboard",
+          "price": "199",
+          "tax": "1",
+          "quantity": 1
+        },
+        {
+          "name": "Xbox One",
+          "description": "Xbox asi es",
+          "price": "10",
+          "tax": "1.99",
+          "id": "371378f6-2c95-48bd-bddb-9f009444e5fd",
+          "quantity": 2
+        },
+        {
+          "name": "PS5",
+          "description": "PS4 Pro new with a controller",
+          "price": "1200",
+          "tax": "1.99",
+          "id": "56bec74e-9bc7-4488-9812-5ee4e6956452",
+          "quantity": 2
+        }
+      ],
+      "price": 4618,
+      "total": 46189.96
     }
   ]
 }
