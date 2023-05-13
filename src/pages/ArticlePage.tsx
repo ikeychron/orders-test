@@ -1,5 +1,5 @@
+import { useTranslation } from "react-i18next";
 import PageLayout from "../components/Layout/PageLayout";
-
 import FormLabel from "../components/Molecules/FormLabel";
 import Input from "../components/Atoms/Input";
 import Button from "../components/Atoms/Button";
@@ -10,17 +10,14 @@ interface IArticlePage {
 }
 
 const ArticlePage = ({ isEdit = false }: IArticlePage) => {
+  const { t } = useTranslation();
   const { dataForm, handleChange, onSubmitForm } = useFormArticle({ isEdit });
 
   return (
-    <PageLayout
-      title={isEdit ? "Show and edit article" : "New article"}
-      link="/"
-      linkTitle="Go to articles page"
-    >
+    <PageLayout title={t(isEdit ? "Show and edit article" : "New article")}>
       <form className="mt-6" onSubmit={onSubmitForm}>
         <div className="grid md:grid-cols-2 md:gap-6 mb-6">
-          <FormLabel htmlFor="name" label="Name">
+          <FormLabel htmlFor="name" label={t("Name")}>
             <Input
               type="text"
               name="name"
@@ -31,7 +28,7 @@ const ArticlePage = ({ isEdit = false }: IArticlePage) => {
               required
             />
           </FormLabel>
-          <FormLabel htmlFor="description" label="Description">
+          <FormLabel htmlFor="description" label={t("Description")}>
             <Input
               type="text"
               name="description"
@@ -44,7 +41,7 @@ const ArticlePage = ({ isEdit = false }: IArticlePage) => {
           </FormLabel>
         </div>
         <div className="grid md:grid-cols-2 md:gap-6 mb-6">
-          <FormLabel htmlFor="price" label="Price (Without Tax)">
+          <FormLabel htmlFor="price" label={t("Price (without tax)")}>
             <Input
               type="number"
               step="any"
@@ -56,7 +53,7 @@ const ArticlePage = ({ isEdit = false }: IArticlePage) => {
               required
             />
           </FormLabel>
-          <FormLabel htmlFor="tax" label="Tax">
+          <FormLabel htmlFor="tax" label={t("Tax")}>
             <Input
               type="number"
               step="any"
@@ -70,7 +67,9 @@ const ArticlePage = ({ isEdit = false }: IArticlePage) => {
           </FormLabel>
         </div>
 
-        <Button type="submit"> {isEdit ? "Edit" : "Create"} article</Button>
+        <Button type="submit">
+          {t(isEdit ? "Edit article" : "Create article")}
+        </Button>
       </form>
     </PageLayout>
   );
